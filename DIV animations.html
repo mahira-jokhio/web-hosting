@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Animated Div Showcase</title>
+  <style>
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif; /* Use a modern font */
+      background: #e6de7b;
+      display: flex;   /* turns a container (like a <div>) into a flex container */
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .box {
+      width: 200px;
+      height: 200px;
+      border-radius: 20px;
+      color: white;
+      font-size: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      transition: all 0.5s ease;        /* Smooth transition for hover effects */
+      backface-visibility: hidden;
+    }
+
+    /* Box 1 - Fade In */
+    .box1 {
+      background-color: #ff6f61;
+      opacity: 0;
+      animation: fadeIn 2s forwards; /* Fade in effect*/
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    /* Box 2 - Slide In */
+    .box2 {
+      background-color: #6a67ce;
+      transform: translateX(-300px);
+      animation: slideIn 1.5s forwards;   /* left to right */
+    }
+
+    @keyframes slideIn {
+      to { transform: translateX(0); }
+    }
+
+    /* Box 3 - Scale Up on Hover */
+    .box3 {
+      background-color: #00b894;
+    }
+
+    .box3:hover {
+      transform: scale(1.2);    /* zoom out */
+      background-color: #019875;
+    }
+
+    /* Box 4 - Rotate on Hover */
+    .box4 {
+      background-color: #f3a30e;
+    }
+
+    .box4:hover {
+      transform: rotate(360deg);   /*rotate effect on hover*/
+    }
+
+    /* Box 5 - Bounce Effect */
+    .box5 {
+      background-color: #e17055;
+      animation: bounce 2s infinite; /*Up and Down bouncing , without hover */
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    /* Box 6 - Flip on Hover */
+    .box6 {
+      background-color: #0984e3;
+      perspective: 1000px;
+      transform-style: preserve-3d;     /* 3D effect , flip horizontally on hover */
+    }
+
+    .box6:hover {
+      transform: rotateY(180deg);
+    }
+
+    /* Box 7 - Color Pulse */
+    .box7 {
+      background-color: #d63031;
+      animation: colorPulse 2s infinite;    /* Color changing effect */
+    }
+
+    @keyframes colorPulse {
+      0%, 100% { background-color: #d63031; }
+      50% { background-color: #f7e92f; }
+    }
+
+    /* Box 8 - Border Glow on Hover */
+    .box8 {
+      background-color: #2d3436;
+      border: 4px solid transparent;  /* borer glow on hover*/
+    }
+
+    .box8:hover {
+      border-color: #74b9ff;
+      box-shadow: 0 0 20px #74b9ff;
+    }
+
+    /* Box 9 - Wobble Animation */
+    .box9 {
+      background-color: #6c5ce7;
+      animation: wobble 1.5s infinite;     /* vibration type effect*/
+    }
+
+    @keyframes wobble {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-10px) rotate(-5deg); }
+      50% { transform: translateX(10px) rotate(5deg); }
+      75% { transform: translateX(-5px) rotate(-2deg); }
+    }
+
+    /* Box 10 - Zoom In on Load */
+    .box10 {
+      background-color: #00cec9;
+      transform: scale(0);
+      animation: zoomIn 1s ease-out forwards;
+    }
+
+    @keyframes zoomIn {
+      to { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box box1">Fade In</div>
+  <div class="box box2">Slide In</div>
+  <div class="box box3">Scale on Hover</div>
+  <div class="box box4">Rotate on Hover</div>
+  <div class="box box5">Bounce</div>
+  <div class="box box6">Flip Hover</div>
+  <div class="box box7">Color Pulse</div>
+  <div class="box box8">Glow on Hover</div>
+  <div class="box box9">Wobble</div>
+  <div class="box box10">Zoom In</div>
+
+</body>
+</html>

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif; /* Use a modern font */
+        background: #fafa99;
+        background-color:linear-gradient(to right, #d318f8, #f5e93f);
+        display: flex;   /* turns a container (like a <div>) into a flex container */
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        gap: 20px;
+        padding: 20px;
+    }
+
+
+    #div1{
+        width: 200px;
+        height: 200px;
+        background-color: rgb(155, 155, 255);
+        color:black;
+        margin: 20px auto;
+        border-radius: 10px;
+        padding-top: 10px;
+        border: 2px solid rgb(0, 0, 0);
+    }
+    #div1:hover{
+        transform: translateX(100px); /* Moves the box side by 100 pixels */
+        transition: transform 0.5s ease; /* Smooth transition effect */
+        /*transform:rotate(90deg); /* Rotates the box by 90 degrees */
+        /*transform:rotateX(180deg); /* Flips the box along the X-axis */
+        /*transform:rotateY(180deg , 80deg); /* Flips the box along the Y-axis */
+    }
+
+
+
+    #div1a{
+        width: 200px;
+        height: 200px;
+        background-color: rgb(255, 0, 0);
+        color: black;
+        margin: 20px auto;
+        border-radius: 10px;
+        padding-top: 10px;
+        border: 2px solid rgb(0, 0, 0);
+    }
+    #div1a:hover{
+
+        transform: translateY(100px); /* Moves the box down by 100 pixels */
+        transition: transform 0.5s ease; /* Smooth transition effect */
+        /*transform: rotate(90deg); /* Rotates the box by 90 degrees */
+        /*transform: rotateX(180deg); /* Flips the box along the X-axis */
+        /*transform: rotateY(180deg , 80deg); /* Flips the box along the Y-axis */
+    }
+
+
+
+
+    #div1b{
+        width: 200px;
+        height: 200px;
+        background-color: rgb(0, 255, 0);
+        color: black;
+        margin: 20px auto;
+        border-radius: 10px;
+        padding-top: 10px;
+        border: 2px solid rgb(0, 0, 0);
+    }
+
+    #div1b:hover{
+        transform: translate3d(50px, 50px, 50px); /* Moves the box by (50px, 50px, 50px) */
+        transition: transform 0.5s ease; /* Smooth transition effect */
+        /*transform: rotate(90deg); /* Rotates the box by 90 degrees */
+        /*transform: rotateX(180deg); /* Flips the box along the X-axis */
+        /*transform: rotateY(180deg , 80deg); /* Flips the box along the Y-axis */
+    }
+
+
+
+    #div2{
+        width: 200px;
+        height: 200px;
+        background-color: green;
+        margin: 20px auto;
+        border-radius: 10px;
+        padding-top: 10px;
+        border: 2px solid rgb(0, 0, 0);
+    }
+    #div2:hover{
+        transform: rotate(90deg); /* Rotates the box by 90 degrees */
+        transition: transform 0.5s ease; /* Smooth transition effect */
+    }
+
+
+    #div2a{
+        width: 200px;
+        height: 200px;
+        background-color: orange;
+        margin: 20px auto;
+        border-radius: 10px;
+        padding-top: 10px;
+        border: 2px solid rgb(0, 0, 0);
+    }
+
+    #div2a:hover{
+        transform: rotate(180deg); /* Rotates the box by 180 degrees */
+        transition: transform 0.5s ease; /* Smooth transition effect */
+    }
+
+
+    #div2b{
+        width: 200px;
+        height: 200px;
+        background-color: rgb(234, 0, 255);
+        margin: 20px auto;
+        border-radius: 10px;
+        padding-top: 10px;
+        border: 2px solid rgb(0, 0, 0);
+    }
+
+    #div2b:hover{
+        transform: rotate(360deg); /* Rotates the box by 360 degrees */
+        transition: transform 0.5s ease; /* Smooth transition effect */
+    }
+
+
+
+    #div3a{
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        margin: 20px auto;
+        border-radius: 10px;
+        padding-top: 10px;
+        border: 2px solid rgb(0, 0, 0);
+    }
+    #div3a:hover{
+        transform: rotateX(180deg); /* Flips the box along the X-axis */
+        transition: transform 0.5s ease; /* Smooth transition effect */
+    }
+
+
+
+    #div3b{
+        width: 200px;
+        height: 200px;
+        background-color: blue;
+        margin: 20px auto;
+        border-radius: 10px;
+        padding-top: 10px;
+        border: 2px solid rgb(0, 0, 0);
+    }
+    #div3b:hover{
+        transform: rotateY(180deg); /* Flips the box along the Y-axis */
+        /*transform: rotateZ(180deg); /* Flips the box along the Z-axis */
+        transition: transform 0.5s ease; /* Smooth transition effect */
+    }
+
+
+
+    #div3c{
+        width: 200px;
+        height: 200px;
+        background-color: cyan;
+        margin: 20px auto;
+        border-radius: 10px;
+        padding-top: 10px;
+        border: 2px solid rgb(0, 0, 0);
+    }
+
+    #div3c:hover{
+        transform: rotateZ(180deg); /* Flips the box along the Z-axis */
+        /*transform: rotate(180deg); /* Flips the box by 180 degrees */
+        transition: transform 0.5s ease; /* Smooth transition effect */
+    }
+
+
+
+    #div4{
+        width: 200px;
+        height: 200px;
+        background-color: yellow;
+        margin: 20px auto;
+        border-radius: 10px;
+        color: black;
+        padding-top: 10px;
+        border: 2px solid rgb(0, 0, 0);
+    }
+    #div4:hover{
+        transform: skewX(30deg); /* Skews the box along the X-axis */
+        /*transform:skewY(30deg); /* Skews the box along the Y-axis */
+        transition: transform 0.5s ease; /* Smooth transition effect */
+    }
+
+
+    #div4a{
+        width: 200px;
+        height: 200px;
+        background-color: rgb(0, 255, 255);
+        margin: 20px auto;
+        border-radius: 10px;
+        color: black;
+        padding-top: 10px;
+        border: 2px solid rgb(0, 0, 0);
+    }
+
+    #div4a:hover{
+        transform: skewY(30deg); /* Skews the box along the Y-axis */
+        /*transform: skewX(30deg); /* Skews the box along the X-axis */
+        transition: transform 0.5s ease; /* Smooth transition effect */
+    }
+
+
+
+
+    #div5{
+        width: 200px;
+        height: 200px;
+        background-color: purple;
+        margin: 20px auto;
+        border-radius: 10px;
+        padding-top: 10px;
+        border: 2px solid rgb(0, 0, 0);
+    }
+    #div5:hover{
+        /*transform: scaleX(1.5); /* Scales the box to 150% of its original size */
+        /*transform: scaleY(1.5);   /* Scales the box to 150% of its original size */
+        transform: scale(1.5, 0.5); /* Scales the box uniformly in both X and Y directions */
+        transition: transform 0.5s ease; /* Smooth transition effect */
+    }
+
+
+
+
+
+    #div5a{
+        width: 200px;
+        height: 200px;
+        background-color: rgb(255, 0, 255);
+        margin: 20px auto;
+        border-radius: 10px;
+        border: 2px solid rgb(0, 0, 0);
+        padding-top: 10px;
+    }
+    #div5a:hover{
+        transform: scaleX(1.5); /* Scales the box to 150% of its original size along the X-axis */
+        /*transform: scaleY(1.5); /* Scales the box to 150% of its original size along the Y-axis */
+        transition: transform 0.5s ease; /* Smooth transition effect */
+    }
+
+
+
+
+    #div5b{
+        width: 200px;
+        height: 200px;
+        background-color: rgb(0, 128, 0);
+        margin: 20px auto;
+        border-radius: 10px;
+        border: 2px solid rgb(0, 0, 0);
+        padding-top: 10px;
+    }
+
+    #div5b:hover{
+        transform: scaleY(1.5); /* Scales the box to 150% of its original size along the Y-axis */
+        /*transform: scaleX(1.5); /* Scales the box to 150% of its original size along the X-axis */
+        transition: transform 0.5s ease; /* Smooth transition effect */
+    }
+
+
+
+
+
+    #div6{
+        width: 200px;
+        height: 200px;
+        background-color: orange;
+        margin: 20px auto;
+        border-radius: 10px;
+        border: 2px solid rgb(0, 0, 0);
+        padding-top: 10px;
+    }
+    #div6:hover{
+        transform: translate(50px, 50px); /* Moves the box 50 pixels right and down */
+        /*transform: translateX(50px); /* Moves the box 50 pixels to the right */
+        /*transform: translateY(50px); /* Moves the box 50 pixels down */
+        transition: transform 0.5s ease; /* Smooth transition effect */
+    }
+
+
+
+    #div6a{
+        width: 200px;
+        height: 200px;
+        background-color: rgb(0, 255, 255);
+        margin: 20px auto;
+        border-radius: 10px;
+        border: 2px solid rgb(0, 0, 0);
+        padding-top: 10px;
+    }
+    #div6a:hover{
+        transform: translateX(50px); /* Moves the box 50 pixels to the right */
+        /*transform: translateY(50px); /* Moves the box 50 pixels down */
+        transition: transform 0.5s ease; /* Smooth transition effect */
+    }
+
+
+
+
+    #div6b{
+        width: 200px;
+        height: 200px;
+        background-color: rgb(255, 0, 0);
+        margin: 20px auto;
+        border-radius: 10px;
+        border: 2px solid rgb(0, 0, 0);
+        padding-top: 10px;
+    }
+
+    #div6b:hover{
+        transform: translateY(50px); /* Moves the box 50 pixels down */
+        /*transform: translateX(50px); /* Moves the box 50 pixels to the right */
+        transition: transform 0.5s ease; /* Smooth transition effect */
+    }
+
+
+
+
+    #div7{
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+        margin: 20px auto;
+        border-radius: 10px;
+        border: 2px solid rgb(0, 0, 0);
+        padding-top: 10px;
+    }
+    #div7:hover{
+        transform: matrix(0.3, 1, 0.5, 1, 0, 0); /* Applies a matrix transformation */
+        /*transform: matrix(1, 0, 0, 1, 50, 50); /* Moves the box by (50px, 50px) */
+        /*transform: matrix(1, 0.5, -0.5, 1, 0, 0); /* Skews the box */
+        transition: transform 0.5s ease; /* Smooth transition effect */
+    }
+
+
+
+
+</style>
+<body>
+    <center>
+        <h1>Transformation in CSS</h1>
+        <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; align-items: center;">
+        <div id="div1">Moving Box by X-axis</div>
+        <div id="div1a">Moving Box by Y-axis</div>
+        <div id="div1b">Moving Box by Z-axis</div>
+
+        <div id="div2"> Rotating Box by 90 deg</div>
+        <div id="div2a">Rotating Box by 180deg</div>
+        <div id="div2b">Rotating Box by 360deg</div>
+
+        <div id="div3a">Rotating Box by X-axis</div>
+        <div id="div3b">Rotating Box by Y-axis</div>
+        <div id="div3c">Rotating Box by Z-axis</div>
+
+        <div id="div4">Skew Box by X-axis</div>
+        <div id="div4a">Skew Box by Y-axis</div>
+
+        <div id="div5a">Scaling Box on X-axis</div>
+        <div id="div5b">Scaling box on Y-axis</div>
+        <div id="div5">Scaling Box X-axis & Y-axis</div>
+
+        <div id="div6a">translate Box X-axis</div>
+        <div id="div6b">translate Box Y-axis</div>
+        <div id="div6">translate Box Z-axis</div>
+
+        <div id="div7">Matrix</div>
+        </div>
+    </center>
+</body>
+</html>
